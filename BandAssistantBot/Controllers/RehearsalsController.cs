@@ -5,7 +5,6 @@ using BandAssistantBot.Services;
 
 namespace BandAssistantBot.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
     public class RehearsalsController : ControllerBase
     {
@@ -17,6 +16,7 @@ namespace BandAssistantBot.Controllers
         }
 
         [HttpGet]
+        [Route("/")]
         public ActionResult<List<Rehearsal>> Get() =>
             _rehearsalService.Get();
 

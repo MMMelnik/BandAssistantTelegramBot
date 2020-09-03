@@ -29,6 +29,8 @@ namespace BandAssistantBot
 
             services.AddSingleton<RehearsalService>();
 
+            services.AddSwaggerGen();
+
             services.AddControllers();
         }
 
@@ -39,6 +41,8 @@ namespace BandAssistantBot
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseSwagger();
 
             app.UseHttpsRedirection();
 
